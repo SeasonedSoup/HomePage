@@ -1,0 +1,79 @@
+/* Mobile First */
+
+*, *::after, *::before {
+    font-family: "Libertinus Math", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+header {
+    background: linear-gradient(to bottom, #c0ddf3, #3294de);
+}
+
+.introduction {
+    background-image:url(images/pexels-opticaltimeline-29145098.jpg);
+    background-position: center;
+    height: 200px;
+}
+
+.about-me {
+    text-align: center;
+}
+
+.lorem {
+    line-height: 1.6rem;
+}
+
+.icon-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column ;
+}
+
+/* Main Section */
+
+.my-work {
+    text-align: center;
+}
+
+.projects {
+    display: grid;
+}
+
+.project {
+    height: 350px;
+    background-color: whitesmoke;
+}
+
+/* Font Classes */
+
+.libertinus {
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.oswald-main {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* Logos */
+
+  .logo {
+    height: 24px;
+    width: 24px;
+  }
+  
