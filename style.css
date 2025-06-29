@@ -10,14 +10,27 @@
     box-sizing: border-box;
 }
 /* Header */
-header {
-    background: linear-gradient(to bottom, #c0ddf3, #3294de);
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 200px
 }
 
 .introduction {
-    background-image:url(images/pexels-opticaltimeline-29145098.jpg);
+    background: no-repeat url(images/pexels-opticaltimeline-29145098.jpg);
     background-position: center;
-    height: 200px;
+    min-height: 400px;
+    min-width: 200px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.name {
+    color: white
 }
 
 .about-me {
@@ -34,25 +47,92 @@ header {
     justify-content: center;
 }
 
-.project {
-    display: flex;
-    flex-direction: column ;
-}
-
 /* Main Section */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .my-work {
     text-align: center;
 }
 
 .projects {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
 }
-
 .project {
     height: 350px;
+    width: 350px;
     background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
 }
+/* image div */
+.project-image {
+    max-height: 60%;
+    max-width: 100%;
+    flex-grow: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    padding: 1%;
+}
+
+/* info div */
+.project-info {
+    flex-grow: 2;
+}
+.project-header {
+    display: flex;
+}
+
+.project-title {
+    margin-right: auto;
+}
+
+.project-links {
+    margin-right: 10%;
+}
+
+/* Footer Section*/
+
+footer {
+    background-color: rgb(12, 194, 185);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.footerInfo {
+    height: 500px;
+}
+
+.calltoaction {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.footerImg {
+    flex-grow: 1;
+}  
+
+.image-child {
+    height: 100%;
+    width: 100%;
+}
+
+
 
 /* Font Classes */
 
@@ -72,8 +152,13 @@ header {
 
   /* Logos */
 
-  .logo {
+.logo {
     height: 24px;
     width: 24px;
-  }
-  
+}
+
+.big {
+    height: 48px;
+    width: 48px;
+}
+
