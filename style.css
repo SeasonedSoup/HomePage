@@ -17,9 +17,15 @@ body {
     gap: 6rem;
 }
 
-
+.header-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: rgb(30, 122, 150);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 45%);
+}
 .introduction {
-    background: no-repeat url(images/pexels-opticaltimeline-29145098.jpg);
+    background: no-repeat url(images/pexels-matteo-sarri-2152532088-32495048.jpg);
     background-position: center;
     min-height: 400px;
     min-width: 200px;
@@ -31,11 +37,16 @@ body {
 }
 
 .name {
-    color: white
+    color: white;
+    font-size: 4rem;
+    margin-left: 2rem;
+    line-height: 6rem;
+    filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5));
 }
 
 .about-me {
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .lorem {
@@ -47,7 +58,7 @@ body {
 .icon-links {
     margin-top: 1rem;
     display: flex;
-    gap: 12px;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -62,6 +73,7 @@ section {
 .my-work {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .projects {
@@ -78,12 +90,19 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 2px;
+
+    box-sizing: content-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-desc {
+    margin-left: 1rem;
 }
 /* image div */
 .project-image {
     max-height: 70%;
     max-width: 100%;
-    flex-grow: 3;
+
 
     display: flex;
     justify-content: center;
@@ -100,18 +119,21 @@ section {
 
 /* info div */
 .project-info {
-    flex-grow: 2;
-}
-.project-header {
-    display: flex;
+    position: relative;
+    height: 60%;
 }
 
-.project-title {
-    margin-right: auto;
+.project-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .project-links {
-    margin-right: 10%;
+    margin-left: 2rem;
+    display: flex;
+    gap: 1rem;
 }
 
 /* Footer Section*/
@@ -127,6 +149,7 @@ footer {
 }
 
 .footerInfo {
+    padding: 2rem;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -136,21 +159,22 @@ footer {
 .calltoaction {
     font-size: 4rem;
     text-align: center;
-    margin-left: 1.7rem;
 }
 
 .ctaText {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-left: 1.7rem;
+    font-size: 1.9rem;
+    font-weight: 500;
 }
 
-.contacts, .address {
-    margin-left: 1.7rem;
+.address, .contacts {
+    font-size: 1.2rem;
 }
-.footerImg {
-    flex-grow: 1;
-}  
+
+.big-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
 
 .image-child {
     height: 100%;
@@ -175,17 +199,28 @@ footer {
     font-style: normal;
   }
 
-  /* Logos */
+  /* Logo Sizes */
 
 .logo {
+    height: 36px;
+    width: 36px;
+}
+
+.small {
     height: 24px;
     width: 24px;
 }
-
 .big {
     height: 48px;
     width: 48px;
 }
 
+/* Transitions */
+
+.project:hover {
+    transform: scale(1.1);
+}
+
 
 /* Media Queries Tablet  */
+
