@@ -262,5 +262,16 @@ footer {
   }
   /* Main Section */
 
-  
+  section {
+    padding: 0 4rem 4rem 4rem;
+  }
+
+  .my-work {
+    align-self: start;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
