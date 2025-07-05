@@ -86,7 +86,7 @@ section {
 .project {
     height: 350px;
     width: 350px;
-    background-color: whitesmoke;
+    background-color: white;
     box-shadow: 2px 5px 10px rgba(0,0,0,0.1);
 
     display: flex;
@@ -141,18 +141,17 @@ section {
 /* Footer Section*/
 
 footer {
-    background-color: rgb(12, 194, 185);
+    background-color: rgb(30, 122, 150);
     color: white;
     
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
 }
 
 .footerInfo {
+    min-height: 550px;
     padding: 2rem;
-    height: 500px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -172,6 +171,10 @@ footer {
     font-size: 1.2rem;
 }
 
+.icon {
+    display: none;
+}
+
 .big-links {
     display: flex;
     gap: 2rem;
@@ -179,8 +182,8 @@ footer {
 }
 
 .image-child {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 
@@ -211,8 +214,8 @@ footer {
 .small {
     height: 24px;
     width: 24px;
-}
-.big {
+}   
+    .big {
     height: 48px;
     width: 48px;
 }
@@ -227,51 +230,126 @@ footer {
 /* Media Queries Tablet  */
 
 @media (min-width: 500px) and (max-width: 1000px) {
-    /* Header */
-  .introduction {
-    float: left;
-    max-width: 350px;
-    max-height: 200px;
-    height: 350px;
-    z-index: 2;
-  }
-  .intro-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 
-  .about-me-background {
-    position: relative;
-    background-color: whitesmoke;
-    box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
-    top:10rem;
-    z-index: 1;
-    margin: 3rem;
-    min-height: 450px;
-    min-width: 600px;
-    transform: translateY(-100px);
-    padding-bottom: 20px;
-  }
+/* Header */
 
-  .lorem {
-    max-width: 70ch;
-    font-size: 1.1rem;
-    word-spacing: 10px;
-    margin-bottom: 2rem;
-  }
-  /* Main Section */
+    .header-background {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 60%);
+    }
 
-  section {
-    padding: 0 4rem 4rem 4rem;
-  }
+    .introduction {
+        float: left;
+        max-width: 350px;
+        max-height: 200px;
+        height: 350px;
+        z-index: 2;
+    }
+    .intro-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
-  .my-work {
-    align-self: start;
-  }
+    .name {
+        position: absolute;
+        left: 13rem;
+        bottom: 20rem;
+        width: auto;
+        white-space: nowrap;
+    }
 
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .about-me-background {
+        position: relative;
+        background-color: white;
+        box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+        top:10rem;
+        z-index: 1;
+        margin: 3rem;
+        min-height: 450px;
+        max-width: 650px;
+        transform: translateY(-100px);
+        padding-bottom: 20px;
+        padding-top: 10px;
+        margin-left: 7rem
+    }
+
+    .about-me {
+        margin-top: 5rem;
+    }
+
+    .lorem {
+        max-width: 60ch;
+        font-size: 1.1rem;
+        word-spacing: 10px;
+        margin-bottom: 2rem;
+    }
+
+    .icon-links {
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    /* Main Section */
+
+    section {
+        padding: 0 4rem 4rem 4rem;
+    }
+
+    .my-work {
+        align-self: start;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        row-gap: 4rem;
+    }
+
+    .project-info {
+        flex-grow: 1;
+        justify-self: end;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: row;
+    }
+
+    .footerInfo {
+        flex-grow: 2;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .calltoaction {
+        white-space: nowrap;
+    }
+
+    .ctaText {
+        font-size: 1.3rem;
+        font-weight: normal;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+    }
+
+
+    .icon {
+        display: inline;
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .icon-links {
+        justify-content: flex-start;
+    }
+
+    .footerImg {
+        padding: 4rem;
+    }
 }
