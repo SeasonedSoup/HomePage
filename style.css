@@ -23,8 +23,9 @@ body {
     inset: 0;
     z-index: -1;
     background-color: rgb(30, 122, 150);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 45%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 60%);
 }
+
 .introduction {
     position: relative;
     min-height: 400px;
@@ -37,7 +38,7 @@ body {
 
 .name {
     position: absolute;
-    bottom: 16rem;
+    bottom: 3rem;
     color: white;
     font-size: 4rem;
     margin-left: 1rem;
@@ -63,6 +64,9 @@ body {
     justify-content: center;
 }
 
+.logo {
+    cursor: pointer;
+}
 /* Main Section */
 
 section {
@@ -208,6 +212,7 @@ footer {
 .logo {
     height: 36px;
     width: 36px;
+    cursor: pointer;
 }
 
 .small {
@@ -224,8 +229,13 @@ footer {
 .project:hover {
     transform: translateY(-12px);
 }
+/* for smaller phones */
 
-
+@media (max-width: 320px) {
+    .project {
+        width: 300px;
+    }
+}
 /* Media Queries Tablet  */
 
 @media (min-width: 500px) and (max-width: 1000px) {
@@ -286,6 +296,7 @@ footer {
     .icon-links {
         justify-content: flex-end;
         margin-right: 2rem;
+        cursor: pointer;
     }
     /* Main Section */
 
@@ -359,6 +370,10 @@ footer {
         display: flex;
     }
 
+    .header-background {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 60%);
+    }
+
     .introduction {
         min-width: 300px;
         margin-left: 4rem;
@@ -410,5 +425,65 @@ footer {
 
     .logo {
         align-self: flex-end;
+    }
+
+    /* Main Section */
+
+    section {
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: normal;
+
+        
+    }
+    .my-work {
+        text-align: start;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(2vw, 3vw, 10vw);
+    }
+
+    .project {
+        width: 300px;
+        cursor: pointer;
+    }
+
+    .project-info {
+        flex-grow: 2;
+    }
+
+    /* footer media laptop+*/
+
+    footer {
+        flex-direction: row;
+    }
+
+    .calltoaction {
+        white-space: nowrap;
+    }
+    .footerInfo {
+        gap: 2rem;
+    }
+
+    .icon {
+        display: inline;
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .big-links {
+        align-self: flex-start;
+    }
+    .footerImg {
+        min-width:  650px;
+        padding: 4rem;
+    }
+
+    .image-child {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
     }
 }
