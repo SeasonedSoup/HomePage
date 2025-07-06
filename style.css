@@ -33,7 +33,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
 .name {
@@ -351,5 +350,65 @@ footer {
 
     .footerImg {
         padding: 4rem;
+    }
+}
+/* Media Query For Laptop to Desktop */
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+    }
+
+    .introduction {
+        min-width: 300px;
+        margin-left: 4rem;
+        margin-top: 3rem;
+    }
+
+    .intro-img {
+        object-fit: cover;
+        height: 400px;
+        width: 100%;
+    }
+
+    .name {
+        bottom: 0.1rem;
+        right: 0.5rem;
+        white-space: nowrap;
+        font-size: 3rem;
+    }
+
+    .about-me-background {
+        background-color: white;
+        box-shadow: 0px 10px 14px rgba(0,0,0,0.1);
+        margin: 4rem 3rem 0 -3rem;
+        z-index: -1;
+        max-height: 375px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me {
+        text-align: start;
+        margin: 2rem;
+        font-size: 3rem;
+    }
+
+    .lorem {
+        font-size: 1.5rem;
+        font-weight: lighter;
+        margin-right: 1rem;
+    }
+
+    .icon-links {
+        flex-grow: 2;
+        justify-self: end;
+        align-self: end;
+        margin: 2rem;
+    }
+
+    .logo {
+        align-self: flex-end;
     }
 }
